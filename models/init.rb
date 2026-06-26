@@ -1,4 +1,5 @@
 require_relative '../config/database'
+require_relative 'category'
 require_relative 'book'
 require_relative 'member'
 require_relative 'points_log'

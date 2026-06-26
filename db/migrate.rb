@@ -1,5 +1,21 @@
 require_relative '../config/database'
 
+DB.create_table? :categories do
+  primary_key :id
+  foreign_key :parent_id, :categories
+  String :name, size: 100, null: false
+  String :code, size: 50
+  Integer :level, default: 1, null: false
+  Integer :position, default: 0, null: false
+  TrueClass :is_leaf, default: true, null: false
+  DateTime :created_at
+  DateTime :updated_at
+
+  index [:parent_id]
+  index [:code], unique: true
+  index [:level]
+end
+
 DB.create_table? :books do
   primary_key :id
   String :isbn, size: 20
@@ -18,6 +34,14 @@ DB.create_table? :books do
   index [:isbn]
   index [:title]
   index [:status]
+end
+
+unless DB[:books].columns.include?(:category_id)
+  DB.alter_table :books do
+    add_foreign_key :category_id, :categories
+    add_index [:category_id]
+  end
+  puts '已为books表添加 category_id 外键'
 end
 
 DB.create_table? :members do
@@ -84,6 +108,21 @@ DB.create_table? :order_logs do
   DateTime :created_at
 
   index [:order_id]
+end
+
+begin
+  if defined?(Category) && Category.where(name: '未分类').count == 0
+    Category.create(
+      name: '未分类',
+      code: 'uncategorized',
+      level: 1,
+      position: 0,
+      is_leaf: true
+    )
+    puts '已创建兜底分类：未分类'
+  end
+rescue => e
+  puts "兜底分类创建提示：#{e.message}"
 end
 
 puts '数据库迁移完成！'
