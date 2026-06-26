@@ -3,7 +3,7 @@ require_relative '../config/database'
 class Book < Sequel::Model
   plugin :validation_helpers
 
-  many_to_one :category
+  many_to_one :category, allow_nil: true
 
   AVAILABLE = 'available'
   SOLD = 'sold'

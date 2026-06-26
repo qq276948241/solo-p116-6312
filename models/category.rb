@@ -45,7 +45,6 @@ class Category < Sequel::Model
 
   def after_destroy
     super
-    books.update(category_id: Category.uncategorized_id)
     parent&.update(is_leaf: parent.children_dataset.count == 0) if parent
   end
 
