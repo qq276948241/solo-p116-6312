@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'sinatra', '~> 2.2'
+gem 'sinatra-contrib', '~> 2.2'
+gem 'sequel', '~> 5.70'
+gem 'sqlite3', '~> 1.6'
+gem 'rackup', '~> 1.0'
+gem 'rake', '~> 13.0'
+gem 'json', '~> 2.6'
+gem 'bcrypt', '~> 3.1'
+gem 'webrick', '~> 1.8'

@@ -1,0 +1,7 @@
+require_relative '../config/database'
+require_relative 'book'
+require_relative 'member'
+require_relative 'points_log'
+require_relative 'order'
+require_relative 'order_item'
+require_relative 'order_log'

@@ -1,0 +1,69 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bcrypt (3.1.22)
+    bigdecimal (4.1.2)
+    json (2.20.0)
+    multi_json (1.21.1)
+    mustermann (2.0.2)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.23)
+    rack-protection (2.2.4)
+      rack
+    rackup (1.0.1)
+      rack (< 3)
+      webrick
+    rake (13.4.2)
+    ruby2_keywords (0.0.5)
+    sequel (5.105.0)
+      bigdecimal
+    sinatra (2.2.4)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.4)
+      tilt (~> 2.0)
+    sinatra-contrib (2.2.4)
+      multi_json
+      mustermann (~> 2.0)
+      rack-protection (= 2.2.4)
+      sinatra (= 2.2.4)
+      tilt (~> 2.0)
+    sqlite3 (1.7.3-x64-mingw-ucrt)
+    tilt (2.7.0)
+    webrick (1.9.2)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  bcrypt (~> 3.1)
+  json (~> 2.6)
+  rackup (~> 1.0)
+  rake (~> 13.0)
+  sequel (~> 5.70)
+  sinatra (~> 2.2)
+  sinatra-contrib (~> 2.2)
+  sqlite3 (~> 1.6)
+  webrick (~> 1.8)
+
+CHECKSUMS
+  bcrypt (3.1.22) sha256=1f0072e88c2d705d94aff7f2c5cb02eb3f1ec4b8368671e19112527489f29032
+  bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
+  bundler (4.0.14) sha256=d09a0a965cf772266a7e49e83610be7c2f4e49e61134c42a56804bb383cc24b8
+  json (2.20.0) sha256=9362bc6e55a952b056abf9167cf053358181c904cb70cd6eee0808ea830fc32b
+  multi_json (1.21.1) sha256=e6126a31808e3b4d19f483c775ceac34df190dffa62adfb63a165ee14ba68080
+  mustermann (2.0.2) sha256=cbe651b6c039e4cefa635b8087398ff59d74f83591064926cc62d37ac4c7e054
+  rack (2.2.23) sha256=a8fe9d7e07064770b8ec123663fded8a59ef7e2b6db5cda7173d45a5718ab69c
+  rack-protection (2.2.4) sha256=82663dceaacffadd31a2936fdead448b8fd8e324891d52c38b2482faa2ced1b4
+  rackup (1.0.1) sha256=ba86604a28989fe1043bff20d819b360944ca08156406812dca6742b24b3c249
+  rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
+  ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
+  sequel (5.105.0) sha256=4191d5e5d011b7229ff8a3401ca6beac047c4d35b1ec6703376513b4b25b2e67
+  sinatra (2.2.4) sha256=3e31e9f7ffc89ce3fdd7770c9a4183150d76b6bdcc7322cf38f84303d3016c72
+  sinatra-contrib (2.2.4) sha256=63ccce08483012e0a966dd7bc63211e108bf14be74af488feae3f6ffc70ccc68
+  sqlite3 (1.7.3-x64-mingw-ucrt) sha256=8304a254e4fb0692e651b6f783e009415085f885d940c51c77981b8523511f45
+  tilt (2.7.0) sha256=0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3
+  webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
+
+BUNDLED WITH
+  4.0.14
